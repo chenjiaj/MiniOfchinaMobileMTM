@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>ManageSystem Register</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Mlogin.css"/>
+</head>
+<body id="login">
+	<div class="contain-fuild">
+		<div class="center-block">
+				<h1>在线笔试<small>审阅系统</small></h1>
+				<div class="alert alert-warning alert-dismissible" role="alert">
+  						<button type="button" class="close" data-dismiss="alert">
+  						<span class="closex">&times;</span>
+  						</button>
+  						请输入正确的用户名和密码!
+				</div> 
+				<form>
+					<div class="form-group  has-feedback">
+						<input type="text" class="form-control text my-text" name="loginname"  value="admin" placeholder="Username" data-contain="body" data-placement="bottom" data-content="用户名不能为空" required autofocus/>
+						<span class="glyphicon glyphicon-user form-control-feedback"></span>
+					</div>
+					<div class="form-group  has-feedback">		
+						<input type="password" class="form-control text my-text" name="password" value="123456" placeholder="Password " required/>
+						<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+					</div>
+					<div class="form-group  has-feedback">		
+						<input type="button" class="btn btn-block btn-primary my-submit" name="password" id="sign-in"  value="Sign in"/>
+					</div>
+				</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/Mlogin.js"></script>
+</body>
+</html>
+

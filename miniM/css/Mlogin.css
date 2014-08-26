@@ -1,0 +1,55 @@
+body {
+  background-color: #f5f5f5;
+  padding-top: 51px;
+}
+* {
+  font-family: "微软雅黑", "宋体";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style-type: none;
+}
+#login .contain-fuild {
+  height: 100%;
+}
+#login .contain-fuild .center-block {
+  max-width: 330px;
+  padding: 15px;
+  margin-top: 20px;
+}
+#login .contain-fuild .center-block h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+#login .contain-fuild .center-block h1 small {
+  margin-left: 10px;
+}
+#login .contain-fuild .center-block .form-control-feedback {
+  top: 5px;
+}
+#login .contain-fuild .center-block .form-control {
+  max-height: 50px;
+  min-height: 45px;
+}
+#login .contain-fuild .center-block .btn {
+  font-size: 16px;
+}
+#login .contain-fuild .center-block .alert {
+  padding: 10px;
+  display: none;
+}
+#login .contain-fuild .center-block .alert p {
+  width: 250px;
+}
+#login .contain-fuild .center-block .close {
+  margin-right: 20px;
+  max-width: 30px;
+}
+#login .contain-fuild .center-block input {
+  padding: 0;
+  height: 47px;
+  line-height: 47px;
+  text-indent: 10px;
+}

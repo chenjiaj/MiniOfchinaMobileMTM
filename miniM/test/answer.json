@@ -1,0 +1,88 @@
+{   "answer":[
+	{
+		"questions":{
+			"id":"3",
+			"question":"dfdsfsquestion",
+			"score":"11",
+			"referanswer":"referanswer",
+			"standard":"standard",
+			"createtime":"createtime"
+		},
+		"ansersheets":{
+			"id":"33",
+			"number":"2",
+			"questionid":"questionid",
+			"sheetid":"1",
+			"score":"333",
+			"comment":"comment",
+			"answer" : "answer"
+		}
+	},
+	{"questions":{
+		"id":"3",
+		"question":"dfdsfsquestion",
+		"score":"11",
+		"referanswer":"referanswer",
+		"standard":"standard",
+		"createtime":"createtime"
+
+	},
+	"ansersheets":{
+		"id":"33",
+		"number":"4",
+		"questionid":"questionid",
+		"sheetid":"2",
+		"score":"333",
+		"comment":"comment",
+		"answer" : "answer"
+	}
+	},
+	{"questions":{
+		"id":"3",
+		"question":"dfdsfsquestion",
+		"score":"11",
+		"referanswer":"referanswer",
+		"standard":"standard",
+		"createtime":"createtime"
+
+	},
+	"ansersheets":{
+		"id":"33",
+		"number":"3",
+		"questionid":"questionid",
+		"sheetid":"4",
+		"score":"333",
+		"comment":"comment",
+		"answer" : "answer"
+	}
+	},
+	{"questions":{
+		"id":"3",
+		"question":"dfdsfsquestion",
+		"score":"11",
+		"referanswer":"referanswer",
+		"standard":"standard",
+		"createtime":"createtime"
+
+	},
+	"ansersheets":{
+		"id":"33",
+		"number":"1",
+		"questionid":"questionid",
+		"sheetid":"3",
+		"score":"333",
+		"comment":"comment",
+		"answer" : "answer"
+	}
+	}
+	],
+	"sumscore":"sumscore",
+	"sumcoment":"sumcoment",
+	"papername":"papername",
+	"score":"score",
+	"typename":"typename",
+	"editor":"editor",
+	"mark":"mark",
+	"candidater":"candidater",
+	"id":1
+}

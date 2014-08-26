@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ManageSystem Register</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/MaddTestFile.css"/>
+</head>
+<body>
+	<!--nav-->
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid" style="color: white">
+				<a class="navbar-brand" href="#">中移物联网在线笔试审阅系统</a>
+			<div class="navbar-right">
+				<!--<form action="" class="navbar-form navbar-left">
+					<input type="text" class="form-control navbar-left search" placeholder="Search..."/>
+					<input type="submit" value="搜索" class="btn btn-default"/>
+				</form>-->
+				<div class="navbar-left has-feedback">
+					<div class="navbar-left user"><span class="glyphicon glyphicon-user"></span></div>
+					<div class="navbar-text navbar-left">hi,<a href="#" class="navbar-link">admin</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--nav end-->
+	<!--contain-->
+	<div class="container-fluid">
+		<div class="row">
+			<!--侧边栏-->
+			<div class="col-lg-2 col-md-3 col-sm-4 sider">
+				<ul class="my-sider-ul">
+					<li id="active"><a href="#"><span class="glyphicon glyphicon-file"></span>试卷管理<span class="navbar-right"></span></a>
+						<ul>
+							<li><a href="MtestList.html"><span class="glyphicon"></span>试卷列表</a></li>
+							<li><a href="MaddTestFile.html"><span class="glyphicon"></span>添加试卷</a></li>
+							<li><a href="Mrecycle.html"><span class="glyphicon"></span>回收站</a></li>
+							<li><a href="Mrecycle.html"  id="activeLi"><span class="glyphicon"></span>试卷编辑</a></li>
+						</ul>
+					</li>
+					<li id="active"><a href="ManswerList.html"><span class="glyphicon glyphicon-list"></span>答卷列表</a></li>
+				</ul>
+			</div>
+			<!--sider end-->
+			<!--右边内容区域-->
+			<div class="col-lg-10 col-md-9 col-sm-8 navbar-right right-main">
+				<div class="right-content">
+					<!--试卷基本信息-->
+					<div class="alert alert-warning alert-dismissible alert-addTestFile" role="alert">
+  						<button type="button" class="close" data-dismiss="alert">
+  						<span class="closex">&times;</span>
+  						</button>
+  						<p></p>
+					</div> 
+					<div class="panel panel-default test-base-information">
+						<div class="panel-heading">试卷基本信息<span>总分:<em class="sumScore">0</em></span></div>
+						<div class="panel-body">
+							<div class="form-group">
+								<div class="input-group">
+									<lable class="input-group-addon">试卷名称</lable>
+									<input type="text" class="form-control  papername" />
+								</div>
+								<div class="input-group">
+									<lable class="input-group-addon">试卷类型</lable>
+									<select name="" id="positiontype" class="form-control papertype positiontype">
+										<option value="-1">请选择试卷类型</option>
+									</select>
+								</div>
+								<div class="input-group ">
+									<lable class="input-group-addon">试卷标签</lable>
+									<input type="text" class="form-control paper-mark" />
+								</div>
+							</div>
+							<!--<div class="form-group">
+								<div class="input-group">
+									<lable class="input-group-addon">出题人</lable>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="input-group">
+									<lable class="input-group-addon">答题时长</lable>
+									<input type="text" class="form-control" />
+								</div>
+							</div>-->
+							<div class="form-group save btn-end">
+								<input type="button" class="btn btn-default my-btn save-base-inform" value="保存试题基本信息"/>
+							</div>
+						</div>
+					</div>
+					<!--试卷基本信息 end-->
+					<!--题目-->
+					<div class="item">
+					<div class="panel panel-default test-item">
+						<div class="panel-heading">
+							<div class="title">
+								<ul>
+									<li>第<span class="num">1</span>题</li>
+									<!--<li><label>题目类型</label>
+										<select name="" id="" class="form-control">
+											<option value="">简答题</option>
+											<option value="">编程题</option>
+										</select>
+									</li>-->
+									<li>
+										本题分数
+										<input type="text" value="" class="form-control grade"/>
+									</li>
+								</ul>
+								</div>
+							<div class="operate-title">
+								<ul>							
+									<li>
+										<input type="button" value="删除此题" class="btn btn-default form-control delete-item"/>
+									</li>
+								</ul>
+							</div>
+							</div>
+						<div class="panel-body">
+							<div class="test-con-stand">
+								<div class="form-group test-content">
+									<h5>编辑题目：</h5>
+									<textarea name="" id="" cols="30" rows="10" class="form-control question"></textarea>
+								</div>
+								<div class="form-group  test-standard">
+									<h5>编辑评分标准</h5>
+									<textarea name="" id="" cols="30" rows="10" class="form-control standard"></textarea>
+								</div>
+							</div>
+							<div class="form-group test-result">
+								<h5>编辑参考答案</h5>
+								<textarea name="" id="" cols="30" rows="10" class="form-control referanswer"></textarea>
+							</div>
+							<div class="form-group save-test-item btn-end">
+								<input type="button" class="btn btn-default my-btn save-the-item" value="确定保存"/>
+							</div>
+						</div>
+					</div>
+					</div>
+					<!--题目 end-->
+					<!--添加题目-->
+					<div class="alert alert-warning add-test-item" role="alert">
+ 						 <a href="#" class="alert-link add-item"><span class="glyphicon glyphicon-plus-sign"></span>添加题目</a>
+					</div>
+					<!--添加题目 end-->
+					<!--提交试卷-->
+					<div class="form-group save-test-item btn-end">
+						<input type="button" class="btn btn-primary btn-lg submit-test" value="提交试卷"/>
+					</div>
+					<!--提交试卷 end-->
+					<div id="Totop">
+						<span class="glyphicon glyphicon-arrow-up"></span>
+						<span class="">Top</span>
+					</div>
+			<!--right c end-->
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../js/public.js"></script>
+	<script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../js/MmodifyTestFile.js"></script>
+</body>
+</html>

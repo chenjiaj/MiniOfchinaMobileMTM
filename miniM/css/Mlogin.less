@@ -1,0 +1,62 @@
+//注册页面
+@bgcolor:#F5F5F5;
+@navheight:50px;
+body{
+	background-color:@bgcolor;
+	padding-top: 51px;
+}
+*{
+	font-family: "微软雅黑","宋体";
+	padding: 0;
+	margin: 0;
+	box-sizing:border-box;
+}
+li{
+	list-style-type: none;
+}
+
+#login{
+	.contain-fuild{
+		height: 100%;
+		.center-block{
+			max-width: 330px;
+			padding: 15px;
+			margin-top: 20px;
+			h1{
+				font-size: 28px;
+				font-weight: 700;
+				small{
+					margin-left: 10px;
+				}
+			}
+			.form-control-feedback{
+				top:5px;
+			}
+			.form-control{
+				max-height: 50px;
+				min-height: 45px;
+				//margin-top: 25px;
+			}
+			.btn{
+				font-size: 16px;
+			}//btn end
+			.alert{
+				padding: 10px;
+				display: none;
+				p{
+					width:250px;
+				}
+			}
+			.close{
+				margin-right: 20px;
+				max-width: 30px;
+			}
+			input{
+				padding: 0;
+				height: 47px;
+				line-height: 47px;
+				text-indent: 10px;
+			}
+		}//center-block end
+	}//contain-fuild end
+}//login end

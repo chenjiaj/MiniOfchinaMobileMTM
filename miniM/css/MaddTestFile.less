@@ -1,0 +1,161 @@
+.right-content{
+			width: 85%;
+			margin: 0 auto;
+		}
+//面板头部
+.panel-heading{
+			text-align: center;
+			font-size: 16px;
+			font-weight: 800;
+			.title{
+				text-align: left;
+				float: left;
+				width:80%;
+				min-width: 400px;
+			}
+			.operate-title{
+				float: right;
+				width: 20%;
+				text-align:right;
+			}
+			&:after{
+			display: block;
+			content: "";
+			clear: both;
+		}
+		}
+//基础信息 面板内容部分
+.test-base-information .panel-body{
+	.form-group{
+		text-align: center;
+		position: relative;
+		left:50%; 
+		&:after{
+			display: block;
+			content: "";
+			clear: both;
+		}
+	}
+	.input-group{
+		position: relative;
+		left: -46%;
+		width: 30%;
+		float: left;
+		margin-right: 10px;
+	}
+	.save{
+		left: 0;
+	}//save end
+	
+}//.test-base-information .panel-body end
+//定义按钮 样式
+.my-btn{
+	border: 1px solid #ccc;
+	background-color: #eee;
+}
+.btn-end{
+	margin-bottom: 0;
+	text-align: center;
+}
+//题目面板样式
+.test-item{
+	.panel-heading{
+		padding: 5px 10px;
+		ul{
+			width: 100%;
+			float:left;
+			margin-left: 20px;
+			margin-bottom: 0;
+
+			li{
+				float: left;
+				height: 34px;
+				line-height: 34px;
+				margin-right: 50px;
+				select{
+					width: 150px;
+				}
+			}
+			.grade{
+					width: 50px;
+					height: 30px;
+					text-align: center;
+				}
+
+		}
+		.operate-title{
+			li{
+				float: right;
+			}
+		}
+	}//panel-heading
+	.panel-body{
+		textarea{
+				height: 150px;
+			}
+		h5{
+			margin-top: 0;
+		}
+		.test-con-stand{
+			width: 100%;
+			&:after{
+				display: block;
+				clear: both;;
+				content: "";
+			}
+		}
+		.test-content{
+			float: left;
+			width: 49%;
+		}
+		.test-standard{
+			float: right;
+			width: 49%;
+		}//test-standard
+		.save-test-item{
+			text-align: center;
+		}
+	}//panel-body end
+}//test-item end
+//添加题目
+.add-test-item{
+	text-align: center;
+	padding: 10px;
+	.glyphicon-plus-sign{
+		margin-right: 10px;
+	}
+	a{
+		font-size: 16px;
+		&:hover{
+			text-decoration: none;
+			color:#000;
+		}
+	}
+}
+//
+.alert-addTestFile{
+	display: none;
+}
+
+.test-base-information .panel-heading span{
+	margin-left: 20px;
+	font-size: 16px;
+}
+#Totop{
+	position: fixed;
+	bottom: 40px;
+	left: 94%;
+	width: 50px;
+	background: #ccc;
+	text-align: center;
+	color: #fff;
+	padding: 6px;
+	cursor: pointer;
+	
+	.glyphicon{
+		font-size: 16px;
+	}
+}
+.right-content{
+	position: relative;
+}

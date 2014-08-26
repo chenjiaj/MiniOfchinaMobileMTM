@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>中移物联网在线笔试系统</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/MaddTestFile.css"/>
+	<style type="text/css">
+			.test-con-stand>div>div,.standard{
+				display: block;
+				word-break: break-all;
+				height: auto;
+				box-shadow: none;
+				border:1px dashed #CCCC66;
+				border-radius: 0;
+			}
+			.grade-item,.grade-item label,.grade-item span{
+				box-shadow: none;
+				border-radius: 0;
+
+			}
+			.comment-item{
+				width: 83%;
+				float:right;
+				min-height: 30px;
+			}
+			.comment{
+				min-height: 50px;
+			}
+			.get-score{
+				width: 15%;
+				float: left;
+				height: 93px;
+			}
+			.write{
+				border-radius: 5px;
+			}
+			.sum:after{
+				display: block;
+				content: "";
+				clear: both;
+			}
+			.sum label,.sum span,.sum .grade-item{
+				min-height:93px;
+			}
+			.sum{
+				padding: 5px;
+			}
+			.sum .sumScore{
+				font-size: 28px;
+				text-align: center;
+				line-height: 75px;
+			}
+			.sum .input-group-addon{
+				font-weight: 700;
+			}
+			.test-item h5{
+				font-size: 16px;
+				font-weight: 900;
+			}
+			.comment,.sum-comment{
+				height: auto;
+			}
+			.print{
+				margin: 10px auto;
+				display: block;
+			}
+
+	</style>
+</head>
+<body>
+	<!--nav-->
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid" style="color: white">
+				<a class="navbar-brand" href="#">中移物联网在线笔试审阅系统</a>
+			<div class="navbar-right">
+				<!--<form action="" class="navbar-form navbar-left">
+					<input type="text" class="form-control navbar-left search" placeholder="Search..."/>
+					<input type="submit" value="搜索" class="btn btn-default"/>
+				</form>-->
+				<div class="navbar-left has-feedback">
+					<div class="navbar-left user"><span class="glyphicon glyphicon-user"></span></div>
+					<div class="navbar-text navbar-left">hi,<a href="#" class="navbar-link">admin</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--nav end-->
+	<!--contain-->
+	<div class="container-fluid">
+		<input type="button" class="btn btn-default print noprint" value="打印答卷"/>
+
+		<div class="row">
+			<!--右边内容区域-->
+			<!--startprint-->
+			<div>
+				<div class="right-content">
+					<!--试卷基本信息-->
+					<div class="panel panel-default test-base-information">
+						<div class="panel-heading">答卷基本信息</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<div class="input-group">
+									<lable class="input-group-addon">试卷名称</lable>
+									<span class="form-control  papername"></span>
+								</div>
+								<div class="input-group">
+									<lable class="input-group-addon">试卷类型</lable>
+									<span class="form-control  positiontype"></span>
+								</div>
+								<div class="input-group ">
+									<lable class="input-group-addon">答题人</lable>
+									<span class="form-control answerPeople"></span>
+								</div>
+							</div>	
+							<div class="form-group">
+								<div class="input-group">
+									<lable class="input-group-addon">出题人</lable>
+									<span class="form-control  editorname"></span>
+								</div>
+								<div class="input-group">
+									<lable class="input-group-addon">试卷总分</lable>
+									<span class="form-control  textsumScore"></span>
+								</div>
+								<div class="input-group ">
+									<lable class="input-group-addon">试卷标签</lable>
+									<span class="form-control paperMark"></span>
+								</div>
+							</div>					
+						</div>
+					</div>
+
+					<!--试卷基本信息 end-->
+					<div class="test-con-stand form-group sum">
+							<p class="get-score input-group grade-item"><label class="input-group-addon">总分:</label><span class="form-control sumScore">99</span></p>
+						<div class="comment-item input-group">
+							<label class="input-group-addon">总体评价:</label>
+							<span class="form-control sum-comment"></span>
+						</div>
+					</div>
+					<!--题目-->
+					<div class="item">
+					<div class="panel panel-default test-item">
+						<div class="panel-heading">
+							<div class="title">
+								<ul>
+									<li>第<span class="num">1</span>题</li>
+								</ul>
+								</div>
+							</div>
+						<div class="panel-body">
+							<div class="test-con-stand">
+								<div class="form-group test-result">
+								<h5>题目:</h5>
+								<div class="form-control question">dsf</div>
+								</div>
+								<div class="form-group test-content">
+									<h5>应聘者答案：</h5>
+									<div class="form-control referanswer"></div>
+								</div>
+								<div class="form-group  test-standard">
+									<h5>参考答案:</h5>
+									<div class="form-control M-referanswer test-result"></div>
+								</div>
+							</div>
+							<div class="form-group test-result">
+								<h5>评分标准:</h5>
+								<div class="form-control standard"></div>
+							</div>
+							<div class="test-con-stand form-group">
+								<div class="get-score">
+									<p class="input-group grade-item"><label class="input-group-addon">总分:</label><span class="grade form-control"></span></p>
+									<p class="input-group write"><label  class="input-group-addon">得分:</label></label><span class="get-grade form-control"></span></p>
+								</div>
+								<div class="comment-item input-group write">
+									<label class="input-group-addon">评语：</label>
+									<span class="form-control comment"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<!--题目 end-->
+					<!--endprint-->
+					<!--提交试卷-->
+					<!--提交试卷 end-->
+					<div id="Totop" class="noprint">
+						<span class="glyphicon glyphicon-arrow-up"></span>
+						<span class="">Top</span>
+					</div>
+			<!--right c end-->
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../js/public.js"></script>
+	<script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../js/MlookupAnswerFile.js"></script>
+</body>
+</html>

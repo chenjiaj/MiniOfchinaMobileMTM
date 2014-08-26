@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ManageSystem Register</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+  <style type="text/css">
+    .my-filter {
+        width: 530px;
+    }
+    .search-choose {
+      width: 120px;
+    }
+  </style>
+</head>
+<body class="account-manage">
+	<!--nav-->
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid" style="color: white">
+				<a class="navbar-brand" href="#">中移物联网在线笔试HR管理系统</a>
+			<div class="navbar-right">
+				<!--<form action="" class="navbar-form navbar-left">
+					<input type="text" class="form-control navbar-left search" placeholder="Search..."/>
+					<input type="submit" value="搜索" class="btn btn-default"/>
+				</form>-->
+				<div class="navbar-left has-feedback">
+					<div class=" navbar-left user"><span class="glyphicon glyphicon-user"></span></div>
+					<div class="navbar-text navbar-left">hi,<a href="#" class="navbar-link">admin</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--nav end-->
+	<!--contain-->
+	<div class="container-fluid">
+		<div class="row">
+			<!--侧边栏-->
+			<div class="col-lg-2 col-md-3 col-sm-4 sider">
+				<ul class="my-sider-ul">
+					<li><a href="accountManage.html"><span class="glyphicon glyphicon-user"></span>账号管理</a></li>
+					<li><a href="testListHr.html"><span class="glyphicon glyphicon-file"></span>试卷列表</a></li>
+					<li id="active"><a href="answerListHr.html"><span class="glyphicon glyphicon-edit"></span>审阅信息</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-list"></span>任务管理<span class="navbar-right"></span></a>
+            <ul>
+              <li><a href="taskList.html"><span class="glyphicon"></span>任务列表</a></li>
+              <li><a href="addTask.html"><span class="glyphicon"></span>分配任务</a></li>
+              <li><a href="recyleTask.html"><span class="glyphicon"></span>回收站</a></li>
+            </ul>
+          </li>
+				</ul>
+			</div>
+			<!--sider end-->
+			<!--右边内容区域-->
+				
+			<div class="col-lg-10 col-md-9 col-sm-8 navbar-right right-main">
+            <div class="my-select-filter-search">
+          <div class="my-filter left">
+              <select class="form-control isRead">
+                <option value="all-read">待审阅</option>
+                <option value="all-not-read">已审阅</option>
+              </select>
+              <select class="form-control positiontype">
+                <option value="all">请选择试卷类型</option>
+              </select>
+              <input type="button" class="btn btn-xt my-btn search" value="筛选"/>
+          </div>
+          <div class="my-search right">
+            <select class="form-control search-choose">
+                <option value="answerfile">试卷名称</option>
+                <option value="answername">答题人姓名</option>
+                <option value="keywords">关键字</option>
+            </select>
+            <input type="text" class="form-control my-text search-text" value="请输入你要查找的内容"  placeholder="请输入你要查找的内容"/>
+            <input type="button" value="搜索" class="btn btn-xt my-btn search-three" class="form-control"/>
+          </div>
+        </div>
+          <!--表格-->
+        <div class="my-table-wrap">
+          <div href="#" class="my-operate-table-data">
+            <span class=" btn btn-xt btn-default print-some">批量打印</span>
+          </div>
+        <table id="dataTable" class="display nowrap dataTable dtr-inline">
+            <thead>
+              <tr>
+              <th class="select-all"><span class="checkbox-span"><input type="checkbox" /></span>全选</th>
+                <th>试卷类型</th>
+                <th>答题人姓名</th>
+                <th>试卷名称</th>
+                <th>登录系统时间</th>
+                <th>提交时间</th>
+                <th>答题持续时间</th>
+                 <th>是否批改</th>
+                <th>批阅时间</th>
+                <th>答卷得分</th>
+                <th>面试官</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th class="select-all"><span class="checkbox-span"><input type="checkbox" /></span>全选</th>
+               <th>试卷类型</th>
+                <th>答题人姓名</th>
+                <th>试卷名称</th>
+                <th>登录系统时间</th>
+                <th>提交时间</th>
+                <th>答题持续时间</th>
+                 <th>是否批改</th>
+                <th>批阅时间</th>
+                <th>答卷得分</th>
+                <th>面试官</th>
+            </tr>
+            </tfoot>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+			</div>
+			<!--right c end-->
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../js/public.js"></script>	
+  <script type="text/javascript" src="../js/ManswerList.js"></script>
+	<script type="text/javascript">
+    var datatables;
+    var setdataTable;
+    setdataTable = function setdataTable(data) {
+    var papertemaplate = data.papertemaplate;
+    datatables.fnClearTable();
+    $(papertemaplate).each(function(index, value) {
+      var tr = "";    
+          tr = $("<tr><td><span class='checkbox-span'><input type='checkbox' /></span></td><td class='typename' axis='"+value.positiontype.id+"'>" + value.positiontype.typename + "</td><td class='papername' axis='"+value.id+"'>" + value.papername + "</td><td class='typename' axis='"+value.editor.id+"'>" + value.editor.username + "</td><td>"+ value.edittime + "</td><td>" + value.mark+ "</td><td class='operate'><a href='MlookupAnswerFile.html?id="+value.id+"' target='blank' class='check'><span class='glyphicon glyphicon-zoom-in'></span>预览</a></tr>");
+        datatables.fnAddData(tr);
+
+    }); 
+    //datatables.order([3,'desc']);
+  }
+    //批量打印
+    $(".print-some").click(function(){
+        var paper=$("#dataTable tbody .checkbox-span input:checked").parent().parent().parent().find(".papername");
+        var str="";
+        $(paper).each(function(){
+          str+=$(this).attr("axis");
+        });
+        if(str != ""){
+          var con = confirm("是否打印所选试卷");
+          if(con){
+            $.post("../test/searchTypename.json",{str:str},function(data){
+              setdataTable(data);
+            });
+          }   
+      }
+    });
+
+  </script>
+
+</body>
+</html>
